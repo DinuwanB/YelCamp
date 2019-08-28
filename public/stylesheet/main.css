@@ -1,0 +1,20 @@
+#show {
+    width: 100%;
+}
+
+#in1 {
+    display:inline;
+}
+ #descr{
+    padding: 8px;
+}
+
+#del-fo {
+    display: inline;
+}
+#form_del{
+    display: inline;
+}
+#error {
+    margin: 10px;
+}
