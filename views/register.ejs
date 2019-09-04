@@ -3,9 +3,19 @@
 <h1>Sign Up</h1>
 
 <form action="/register" method="post">
-    <input type="text" name="username" placeholder="User Name">
-    <input type="password" name="password" placeholder="Password">
-    <button>Submit</button>
+  <input type="text" name="firstName" placeholder="First Name">
+  <input type="text" name="lastName" placeholder="Last Name">
+  <input type="email" name="email" placeholder="User email">
+  <input type="password" name="password" placeholder="Password">
+  <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+      <label class="form-check-label" for="inlineRadio1">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+      <label class="form-check-label" for="inlineRadio2">Female</label>
+    </div>
+  <button>Submit</button>
 </form>
 
 
