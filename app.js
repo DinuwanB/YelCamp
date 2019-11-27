@@ -15,8 +15,7 @@ var passport          =   require("passport"),
 
 var commentRoute      =   require("./routes/comment"),
     campgroundRoute   =   require("./routes/campground"),
-    authRoutes        =   require("./routes/auth"),
-    userRegister      =   require("./routes/newRegister");
+    authRoutes        =   require("./routes/auth")
 
     //seedDB();
     mongoose.connect("mongodb://localhost:27017/YelCamp_V4", {useNewUrlParser: true});
@@ -48,7 +47,10 @@ var commentRoute      =   require("./routes/comment"),
     app.use(authRoutes);
     app.use("/campground",campgroundRoute);
     app.use("/campground/:id/comment",commentRoute);
-    app.use(userRegister);
+    
+    const userRegister = require('./routes/newRegister');
+    app.use("/register", userRegister);
+ 
 
     app.listen(3000, () => console.log("The Project Server Started"));
     

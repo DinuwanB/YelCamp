@@ -4,12 +4,13 @@ var NewUserSchema = new mongoose.Schema({
     firstName : String,
     lastName : String, 
     email : String,
-    password : String,
-    gender :String
+    gender :String,
+    password : String
+    
     
 
 }); 
+ 
 
 
-
-module.exports = mongoose.model("User", NewUserSchema); 
+module.exports = mongoose.model("UserR", NewUserSchema); 

@@ -1,5 +1,6 @@
 var express  = require("express");
 var router   = express.Router();
+var User = require("../models/newUser");
 
 
 router.get("/register", function(req, res){
@@ -8,8 +9,16 @@ router.get("/register", function(req, res){
 
   
 
-   /*router.post("/register", function(req, res){
-        var newUser = new newUsers({username : req.body.username});
+   router.post("/register", function(req, res){
+           var firstName = req.body.firstName;
+           var lastName = req.body.lastName;
+           var email = req.body.email;
+           var gender = req.body.gender;
+           var password = req.body.password;
+
+           var newUser = User({
+               firstName,lastName,email,gender,passport
+           });
         User.register(newUser, req.body.password, function(err, user){
             if(err){
                 req.flash("error", err.message);
@@ -22,7 +31,7 @@ router.get("/register", function(req, res){
             });
         });
     }); 
-    */
+    
     
 
    module.exports = router;
